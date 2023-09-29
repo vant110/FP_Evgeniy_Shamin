@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply min-w-min bg-base-light text-content-dark;
+  }
+
+  h1 {
+    @apply text-7xl font-extrabold text-content-light;
+  }
+  h2 {
+    @apply text-4xl font-extrabold text-content-light;
+  }
+
+  p {
+    @apply leading-8 text-content-light/60;
+  }
+}
+
+@layer components {
+  .my-container {
+    @apply px-6 mx-auto max-w-6xl;
+  }
+
+  .my-btn {
+    @apply px-9 pt-3.5 pb-3 rounded-md text-sm font-black uppercase;
+  }
+}
