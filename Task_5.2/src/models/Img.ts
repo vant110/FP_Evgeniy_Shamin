@@ -6,6 +6,10 @@ class Img {
     this.src = src
     this.alt = alt
   }
+
+  toString() {
+    return `src='${this.src}', alt='${this.alt}'`
+  }
 }
 
 export default Img

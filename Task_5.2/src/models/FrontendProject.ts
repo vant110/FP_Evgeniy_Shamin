@@ -7,6 +7,16 @@ class FrontendProject extends Project {
   get imgs() {
     return this.#imgs
   }
+
+  toString() {
+    let s = `${super.toString()}\n(${this.#imgs.length}) Изображения:`
+
+    for (let i = 0; i < this.#imgs.length; i++) {
+      s += `\n${i}: ${this.#imgs[i]}`
+    }
+
+    return s
+  }
 }
 
 export default FrontendProject

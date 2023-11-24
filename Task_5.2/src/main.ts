@@ -4,16 +4,7 @@ import Img from './models/Img'
 import Project from './models/Project'
 
 function log(projects: Project[]) {
-  projects.forEach(project => {
-    console.log(`- ${project.name}`)
-
-    if (project instanceof FrontendProject) {
-      console.log(project.imgs)
-    }
-    else if (project instanceof BackendProject) {
-      console.log(project.description)
-    }
-  })
+  projects.forEach(project => console.log(project.toString()))
 }
 
 console.log('Создание:')

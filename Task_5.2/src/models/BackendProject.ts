@@ -8,6 +8,10 @@ class BackendProject extends Project {
 
     this.description = description
   }
+
+  toString() {
+    return `${super.toString()}\nОписание='${this.description}'`
+  }
 }
 
 export default BackendProject

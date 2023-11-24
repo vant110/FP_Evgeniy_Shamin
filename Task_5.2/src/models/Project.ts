@@ -16,6 +16,10 @@ class Project {
   constructor(name: string) {
     this.name = name
   }
+
+  toString() {
+    return `Название='${this.#name}'`
+  }
 }
 
 export default Project
