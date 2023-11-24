@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply fill-base-content;
+  }
+}
+
+@layer components {
+  ::backdrop {
+    @apply bg-transparent backdrop-blur-sm;
+  }
+
+  .my-btns .btn {
+    @apply text-xl;
+  }
+}
+
+@layer utilities {
+}
