@@ -136,7 +136,7 @@ openHistoryButton.addEventListener('click', () => {
 
     historyContainer.childNodes.forEach(element => {
       element.addEventListener('click', e => {
-        const historyIndex = Number((e.target as HTMLElement).getAttribute('data-history-index'))
+        const historyIndex = Number((e.currentTarget as HTMLElement).getAttribute('data-history-index'))
 
         myCalculator.restore(historyIndex)
 
