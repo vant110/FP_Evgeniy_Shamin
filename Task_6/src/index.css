@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply min-w-min bg-base-light text-content-dark;
+  }
+
+  h1 {
+    @apply text-7xl font-extrabold text-content-light;
+  }
+  h2 {
+    @apply text-4xl font-extrabold text-content-light;
+  }
+
+  p {
+    @apply leading-8 text-content-light/60;
+  }
+}
+
+@layer components {
+  ::backdrop {
+    @apply backdrop-blur-sm;
+  }
+
+  .my-container {
+    @apply px-6 mx-auto max-w-6xl;
+  }
+
+  .my-grid {
+    @apply grid max-w-fit grid-cols-[repeat(2,_minmax(0,_fit-content))] gap-x-3 gap-y-4 self-start;
+  }
+  .my-grid>h1,
+  .my-grid>h2,
+  .my-grid>h3,
+  .my-grid>h4 {
+    @apply col-span-2;
+  }
+  .my-grid>label {
+    @apply min-h-[2rem] label-text mb-auto justify-self-end text-right;
+  }
+  .my-grid input {
+    @apply input input-bordered input-sm;
+  }
+
+  .my-btn {
+    @apply px-9 pt-3.5 pb-3 rounded-md text-sm font-black uppercase;
+  }
+}
