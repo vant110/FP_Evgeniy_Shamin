@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Прогноз погоды</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='./src/style.css'>
+</head>
+
+<body>
+  <div class='absolute inset-0 flex'>
+    <main class='m-auto border-base-300 p-5 space-y-3 rounded-2xl border shadow-lg'>
+      <div class='flex space-x-2'>
+        <input id='cityInput' placeholder='Город' value='Самара' class='input input-bordered input-sm' />
+        <button id='showButton' class='btn btn-primary btn-sm'>Отобразить</button>
+      </div>
+      <div id='forecast' class='space-y-3'></div>
+    </main>
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>
