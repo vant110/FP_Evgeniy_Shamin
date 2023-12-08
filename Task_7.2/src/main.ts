@@ -38,11 +38,11 @@ const stream2 = new Observable(o => {
   o.error('Ошибка')
 })
 
-// stream2.subscribe({
-//   next: v => alert(v),
-//   error: v => alert(v),
-//   complete: () => alert('complete')
-// })
+stream2.subscribe({
+  next: v => alert(v),
+  error: v => alert(v),
+  complete: () => alert('complete')
+})
 
 // Три кнопки
 
