@@ -16,7 +16,7 @@ openContactButton.addEventListener('click', () => {
   contactDialog.showModal()
 })
 
-closeContactButton.addEventListener("click", () => {
+closeContactButton.addEventListener('click', () => {
   contactDialog.close()
 })
 
@@ -94,7 +94,7 @@ contactForm.addEventListener('submit', e => {
     invalidFields += 'Email, '
   }
   if (contact.phone !== ''
-    && !/^\+\d\(\d{3}\)\d{2}\-\d{2}\-\d{3}$/.test(contact.phone)) {
+    && !/^\+\d\(\d{3}\)\d{2}-\d{2}-\d{3}$/.test(contact.phone)) {
     invalidFields += 'Номер телефона, '
   }
   if (contact.message === '') {
