@@ -1,0 +1,43 @@
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+.center>* {
+  margin: auto;
+}
+
+.card {
+  border: 1px solid rgb(0 0 0 / 0.1);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.card>:not([hidden])~:not([hidden]) {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.animal {
+  padding: 0.625rem 0.25rem;
+}
+.animal>:not([hidden])~:not([hidden]) {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+.animal:hover {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
+.animal_detailed {
+  background-color: rgb(0 0 0 / 0.05);
+}
+
+.animal__field {
+  display: flex;
+  justify-content: space-between;
+}
+.animal__field>:not([hidden])~:not([hidden]) {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}

@@ -1,4 +1,48 @@
-<main>
-</main>
+<div class='center'>
+  <main class='card'>
+    <button (click)="toggleCatsHidden()">
+      {{ catsHidden ? 'Показать' : 'Скрыть' }} котиков
+    </button>
+    <div>
+      @for (animal of animals; track animal.id) {
+      <div (click)="toggleDetailedAnimal(animal.id)" [ngClass]="{
+        animal,
+        animal_detailed: animal.id === detailedAnimalId
+      }">
+        <div class='animal__field'>
+          <span>Тип:</span>
+          <span>{{ animal.getType() }}</span>
+        </div>
+        <div class='animal__field'>
+          <span>Кличка:</span>
+          <span>{{ animal.name }}</span>
+        </div>
+        @if (animal.id === detailedAnimalId) {
+        <div class='animal__field'>
+          <span>Пол:</span>
+          <span>{{ animal.getGender() }}</span>
+        </div>
+        <div class='animal__field'>
+          <span>Год рождения:</span>
+          <span>{{ animal.birthYear }}</span>
+        </div>
+        <div class='animal__field'>
+          <span>Прививки:</span>
+          <span>{{ animal.vaccinated ? 'Да' : 'Нет' }}</span>
+        </div>
+        <div class='animal__field'>
+          <span>Стерилизация:</span>
+          <span>{{ animal.sterilized ? 'Да' : 'Нет' }}</span>
+        </div>
+        <div class='animal__field'>
+          <span>Чип:</span>
+          <span>{{ animal.chipped ? 'Да' : 'Нет' }}</span>
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </main>
+</div>
 
 <router-outlet></router-outlet>
